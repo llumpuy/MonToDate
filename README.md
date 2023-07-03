@@ -24,7 +24,7 @@ The following sections describes the key concepts. This will also help to deline
 
 ### Outcome
 
-An Outcome is the specification of configuration changes that can be applied (as a single operation) to a platform to change its capabilities. MonOuts are normally preserved as files, with one file per Outcome.
+An Outcome is the specification of configuration changes that can be applied (as a single operation) to a platform to change its capabilities. Outcomes are  preserved as a single file.
 
 In MonToDate, Outcomes are the result of merging a Template (that defines the generic structure of the Outcome) with Data Sources. In this very narrow definition, an Outcome is considered outdated if any, its Data Sources or its Template are different from those that were used when its most recent instantiation was produced.
 
@@ -34,9 +34,10 @@ For this prototyp, an Outcome contain:
 
 * An Specification file (as a JSON document)
 * A (relative) path to its working area, where copies of Templates, Data Sources and other temporary assets are stored while the Outcome is being processed
+* A (relative) path to the Template and Data Source files that were last merged to produce the most recent instance
 * A (relative) path to its last instance area, where the most recent merged outcome can be found
-* A (relative) path to its Template
-* A (relative) path to its Data Sources
+* A (relative) path to its target Template
+* A (relative) path to its target Data Sources
 * A (relative) path to its Apply method
 * One Velocity Template
 * Zero to many Data Sources
